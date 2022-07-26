@@ -10,8 +10,9 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="#" class="d-block">Nama Admin</a>
+          <a href="#">{{ Auth::user()->name }}</a> <br>
         </div>
+        
       </div>
 
       <!-- Sidebar Menu -->
@@ -38,6 +39,7 @@
             </a>
           </li>
         </ul>
+        <a href="/logout" class="btn btn-danger btn-block">Logout</a>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

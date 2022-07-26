@@ -19,43 +19,8 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-user-alt"></i>
-              <p> Data Warga</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+  
+  @include('admin.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -63,12 +28,12 @@
         <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-            <h1>Tambah Data Warga</h1>
+            <h1>Tambah Data Program</h1>
             </div>
             <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Warga</li>
+                <li class="breadcrumb-item active">Program</li>
             </ol>
             </div>
         </div>
@@ -85,95 +50,20 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
-                    <h3 class="card-title">Isikan Data Warga </h3>
+                    <h3 class="card-title">Isikan Data Program </h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="/admin/warga-store" method="POST">
+                    <form action="/admin/program/store" method="POST" enctype="multipart/form-data">
                         @csrf
                     <div class="card-body">
                         <div class="form-group">
-                        <label for="">NO KK</label>
-                        <input type="text" class="form-control" id="" placeholder="NOKK" required name="nokk">
+                        <label for="">Judul</label>
+                        <input type="text" class="form-control" id="" placeholder="Judul" required name="title">
                         </div>
                         <div class="form-group">
-                        <label for="">NIK</label>
-                        <input type="text" class="form-control" id="" placeholder="NIK" required name="nik">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Nama Kepala Keluarga</label>
-                        <input type="text" class="form-control" id="" placeholder="Nama Kepala Keluarga" required name="nmkk">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Nama</label>
-                        <input type="text" class="form-control" id="" placeholder="Nama" required name="nama">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Jenis Kelamin</label>
-                        <select required name="jk" id="" class="form-control">
-                            <option value="L">Laki-Laki</option>
-                            <option value="P">Perempuan</option>
-                        </select>
-                        </div>
-                        <div class="form-group">
-                        <label for="">Tempat Lahir</label>
-                        <input type="text" class="form-control" id="" placeholder="Tempat Lahir" required name="tmp_lahir">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Tanggal Lahir</label>
-                        <input type="text" class="form-control" id="" placeholder="Tanggal Lahir" required name="tgl_lahir">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Golongan Darah</label>
-                        <input type="text" class="form-control" id="" placeholder="Golongan Darah" required name="gdr">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Agama</label>
-                        <input type="text" class="form-control" id="" placeholder="Agama" required name="agama">
-                        </div>
-                        <div class="form-group">
-                        <label for="">satulimalima</label>
-                        <input type="text" class="form-control" id="" placeholder="15543" required name="satulimalima">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Status Kawin</label>
-                        <input type="text" class="form-control" id="" placeholder="Status Kawin" required name="st_kawin">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Shdrt</label>
-                        <input type="text" class="form-control" id="" placeholder="SHDRT" required name="shdrt">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Pendidikan</label>
-                        <input type="text" class="form-control" id="" placeholder="Pendidikan" required name="pddkn">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Pekerjaan</label>
-                        <input type="text" class="form-control" id="" placeholder="Pekerjaan" required name="pkrjaan">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Ibu</label>
-                        <input type="text" class="form-control" id="" placeholder="Ibu" required name="ibu">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Ayah</label>
-                        <input type="text" class="form-control" id="" placeholder="Ayah" required name="ayah">
-                        </div>
-                        <div class="form-group">
-                        <label for="">NO HP</label>
-                        <input type="text" class="form-control" id="" placeholder="Nomor Handphone" required name="no_hp">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Dusun</label>
-                        <input type="text" class="form-control" id="" placeholder="Dusun" required name="dusun">
-                        </div>
-                        <div class="form-group">
-                        <label for="">RT</label>
-                        <input type="text" class="form-control" id="" placeholder="RT" required name="rt">
-                        </div>
-                        <div class="form-group">
-                        <label for="">RW</label>
-                        <input type="text" class="form-control" id="" placeholder="RW" required name="rw">
+                        <label for="">Foto</label>
+                        <input type="file" class="form-control" id="" required name="foto">
                         </div>
                     </div>
                     <!-- /.card-body -->

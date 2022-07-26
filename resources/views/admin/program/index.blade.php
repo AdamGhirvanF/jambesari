@@ -19,43 +19,7 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-user-alt"></i>
-              <p> Data Warga</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+ @include('admin.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -64,12 +28,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Warga</h1>
+            <h1>Data Program</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Warga</li>
+              <li class="breadcrumb-item active">Program</li>
             </ol>
           </div>
         </div>
@@ -83,7 +47,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"><a href="/admin/warga-create" class="btn btn-primary" type="submit">Tambah Warga</a></h3>
+                <h3 class="card-title"><a href="/admin/program/create" class="btn btn-primary" type="submit">Tambah Program</a></h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -92,26 +56,8 @@
                   <thead>
                   <tr>
                     <th>No.</th>
-                    <th>NO KK</th>
-                    <th>NIK</th>
-                    <th>Nama Kepala Keluarga</th>
-                    <th>Nama</th>
-                    <th>JK</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Golongan Darah</th>
-                    <th>Agama</th>
-                    <th>15543</th>
-                    <th>Status Kawin</th>
-                    <th>SHDRT</th>
-                    <th>Pendidikan</th>
-                    <th>Pekerjaan</th>
-                    <th>Ibu</th>
-                    <th>Ayah</th>
-                    <th>No HP</th>
-                    <th>Dusun</th>
-                    <th>RT</th>
-                    <th>RW</th>
+                    <th>Judul</th>
+                    <th>Foto</th>
                     <th style="width: 200px!important;">Action</th>
                   </tr>
                   </thead>
@@ -119,27 +65,9 @@
                     @foreach($data as $key => $w)
                     <tr>
                       <td>{{$key+=1}}</td>
-                      <td>{{$w->nokk}}</td>
-                      <td>{{$w->nik}}</td>
-                      <td>{{$w->nmkk}}</td>
-                      <td>{{$w->nama}}</td>
-                      <td>{{$w->jk}}</td>
-                      <td>{{$w->tmp_lahir}}</td>
-                      <td>{{$w->tgl_lahir}}</td>
-                      <td>{{$w->gdr}}</td>
-                      <td>{{$w->agama}}</td>
-                      <td>{{$w->satulimalima}}</td>
-                      <td>{{$w->st_kawin}}</td>
-                      <td>{{$w->shdrt}}</td>
-                      <td>{{$w->pddkn}}</td>
-                      <td>{{$w->pkrjaan}}</td>
-                      <td>{{$w->ibu}}</td>
-                      <td>{{$w->ayah}}</td>
-                      <td>{{$w->no_hp}}</td>
-                      <td>{{$w->dusun}}</td>
-                      <td>{{$w->rt}}</td>
-                      <td>{{$w->rw}}</td>
-                      <td><a href="/admin/warga-edit/{{$w->nik}}" class="btn btn-primary"><i class="fas fa-edit"></i></a> <a href="/admin/warga-delete/{{$w->nik}}" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk menghapus data ini?');"><i class="fa fa-trash"></i></a></td>
+                      <td>{{$w->title}}</td>
+                      <td><img src="/img/program/{{ $w->foto }}" alt="" style="width: 300px; height: 100x;"></td>
+                      <td><a href="/admin/program/edit/{{$w->id}}" class="btn btn-primary"><i class="fas fa-edit"></i></a> <a href="/admin/program/delete/{{$w->id}}" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk menghapus data ini?');"><i class="fa fa-trash"></i></a></td>
                     </tr>
                     @endforeach
                   </tbody>

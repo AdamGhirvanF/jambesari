@@ -30,9 +30,9 @@ class AdminController extends Controller
 
     public function indexProgram()
     {
-        $data = Berita::all();
+        $data = Program::all();
 
-        return view('admin.berita.index', ['data' => $data]);
+        return view('admin.program.index', ['data' => $data]);
     }
 
     /**
@@ -48,6 +48,11 @@ class AdminController extends Controller
     public function createBerita()
     {
         return view('admin.berita.create');
+    }
+
+    public function createProgram()
+    {
+        return view('admin.program.create');
     }
 
     /**
@@ -98,6 +103,19 @@ class AdminController extends Controller
         return redirect('admin/berita');
     }
 
+    public function storeProgram(Request $req)
+    {
+        $data = new Program;
+        $data->title = $req->title;
+        $image = $req->file('foto');
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path('img/program/'), $fileName);
+        $data->foto = $fileName;
+        $data->save();
+
+        return redirect('admin/program');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -127,6 +145,13 @@ class AdminController extends Controller
         $data = Berita::find($id);
         
         return view('admin.berita.edit', ['data' => $data]);
+    }
+
+    public function editProgram($id)
+    {
+        $data = Program::find($id);
+        
+        return view('admin.program.edit', ['data' => $data]);
     }
 
     public function storeEditWarga(Request $req, $id)
@@ -174,6 +199,22 @@ class AdminController extends Controller
         return redirect('admin/berita');
     }
 
+    public function storeEditProgram(Request $req, $id)
+    {
+        $data = Program::find($id);
+        $data->title = $req->title;
+        if($req->file('foto') != null) {
+            $image = $req->file('foto');
+            $fileName = $image->getClientOriginalName();
+            $image->move(public_path('img/program/'), $fileName);
+            $data->foto = $fileName;
+        }
+
+        $data->save();
+
+        return redirect('admin/program');
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -206,5 +247,13 @@ class AdminController extends Controller
         $data->delete();
 
         return redirect('/admin/berita');
+    }
+
+    public function deleteProgram($id)
+    {
+        $data = Program::find($id);
+        $data->delete();
+
+        return redirect('/admin/program');
     }
 }
