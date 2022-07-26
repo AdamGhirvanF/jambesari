@@ -27,8 +27,8 @@
             </tr>
             @foreach($warga as $w)
             <tr>
-                <td>{{$w->nokk}}</td>
-                <td>{{$w->nik}}</td>
+                <td>{{substr($w->nokk, 0, 8)}}********</td>
+                <td>{{substr($w->nik, 0, 8)}}********</td>
                 <td>{{$w->nama}}</td>
                 <td>{{$w->shdrt}}</td>
             </tr>

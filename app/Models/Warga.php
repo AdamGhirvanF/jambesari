@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Warga extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+    protected $primaryKey = 'nik';
 }
