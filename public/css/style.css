@@ -88,11 +88,13 @@ a {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    transition: 0.3s ease-in;
+    border: #7B84BF 1px solid;
 }
 
 .banner .link-layanan:hover {
     background-color: #787E9E;
-    border-color: var(--first-color);
+    border: var(--first-color) 1px solid;
 }
 
 .banner .link-layanan img {
@@ -126,6 +128,7 @@ a {
     transition: 0.3s ease;
     font-family: PoppinsSemiBold;
     margin: auto;
+    cursor: pointer;
 }
 
 .statistik .card:hover {
@@ -155,8 +158,8 @@ a {
     border-radius: 10px;
 }
 
-.lembaga .item:hover {
-    background-color: #A3AAD1;
+.lembaga .item img {
+    transition: 0.3s ease-in-out;
 }
 
 .lembaga .item:hover img {
@@ -553,10 +556,12 @@ footer a {
     .nav-link {
         display: block;
         width: 100%;
+        margin: 10px 0;
     }
 
     .nav-link a {
         color: var(--fourth-color);
+        font-size: 25px;
     }
 
     .nav-link a:hover {
