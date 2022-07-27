@@ -3,8 +3,6 @@
 @section("container")
 
     @include("partials.breadcrumb")
-    
-    <div class="h3 page-title px-3 px-md-5 py-3">Galeri</div>
 
     <div class="container galeri p-4 my-4 mx-auto">
     <div class="row">

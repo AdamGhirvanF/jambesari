@@ -33,21 +33,22 @@ class FrontendController extends Controller
 
     public function indexBerita()
     {
-        return view("frontend.berita", ["title" => "Berita Desa Jambesari"]);
+        return view("frontend.berita", ["title" => "Berita"]);
     }
 
+    // satu berita
     public function isiBerita()
     {
-        return view("frontend.page.berita.one", ["title" => "Berita Desa Jambesari"]);
+        return view("frontend.page.berita.one", ["title" => "Judul Berita"]);
     }
 
     public function indexBumdes()
     {
-        return view("frontend.page.lembaga.bumdes", ["title" => "BUM Desa Jambesari"]);
+        return view("frontend.page.lembaga.bumdes", ["title" => "BUMDes"]);
     }
 
     public function indexProgram()
     {
-        return view("frontend.program", ["title" => "Program Desa Jambesari"]);
+        return view("frontend.program", ["title" => "Program Desa"]);
     }
 }

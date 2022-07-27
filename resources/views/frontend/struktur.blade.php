@@ -4,7 +4,6 @@
 
         @include("partials.breadcrumb")
 
-        <div class="h3 page-title px-3 px-md-5 py-3">Struktur Desa</div>
         <div class="struktur">
             <div class="container mb-3">
                 <table class="table table-bordered table-hover">
