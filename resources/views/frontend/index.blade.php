@@ -5,7 +5,7 @@
         <div class="banner">
             <img src="{{ URL::asset ('img/index/banner.png'); }}" alt="Banner" width="100%">
             <div class="h1 welcome text-white">Laman Resmi<br>Desa Jambesari</div>
-            <a href="/layanan.html">
+            <a href="/layanan">
                 <div class="btn link-layanan text-white text-center">
                     Lihat Semua Layanan
                     <img src="{{ URL::asset('icon/banner/Category.svg'); }}" class="ms-2">
