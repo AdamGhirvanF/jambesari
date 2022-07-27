@@ -38,6 +38,18 @@
               <p> Data Program</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/admin/lembaga" class="nav-link {{ ((request()->is('admin/lembaga/*') || request()->is('admin/lembaga')) ) ? 'active' : '' }}">
+              <i class="nav-icon fa fa-building"></i>
+              <p> Data Lembaga</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/admin/galeri" class="nav-link {{ ((request()->is('admin/galeri/*') || request()->is('admin/galeri')) ) ? 'active' : '' }}">
+              <i class="nav-icon fas fa-camera"></i>
+              <p> Data Galeri</p>
+            </a>
+          </li>
         </ul>
         <a href="/logout" class="btn btn-danger btn-block">Logout</a>
       </nav>

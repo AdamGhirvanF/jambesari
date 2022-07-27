@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Warga;
 use App\Models\Berita;
 use App\Models\Program;
+use App\Models\Lembaga;
+use App\Models\Galeri;
 
 class AdminController extends Controller
 {
@@ -35,6 +37,20 @@ class AdminController extends Controller
         return view('admin.program.index', ['data' => $data]);
     }
 
+    public function indexGaleri()
+    {
+        $data = Galeri::all();
+
+        return view('admin.galeri.index', ['data' => $data]);
+    }
+
+    public function indexLembaga()
+    {
+        $data = Lembaga::all();
+
+        return view('admin.lembaga.index', ['data' => $data]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -53,6 +69,16 @@ class AdminController extends Controller
     public function createProgram()
     {
         return view('admin.program.create');
+    }
+
+    public function createLembaga()
+    {
+        return view('admin.lembaga.create');
+    }
+
+    public function createGaleri()
+    {
+        return view('admin.galeri.create');
     }
 
     /**
@@ -116,6 +142,37 @@ class AdminController extends Controller
         return redirect('admin/program');
     }
 
+    public function storeGaleri(Request $req)
+    {
+        $data = new Galeri;
+        $image = $req->file('foto');
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path('img/galeri/'), $fileName);
+        $data->foto = $fileName;
+        $data->save();
+
+        return redirect('admin/galeri');
+    }
+
+    public function storeLembaga(Request $req)
+    {
+        $data = new Lembaga;
+        $data->nama = $req->nama;
+        $data->deskripsi = $req->deskripsi;
+        $data->program_kerja = $req->program_kerja;
+        $image = $req->file('logo');
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path('img/lembaga/logo/'), $fileName);
+        $data->logo = $fileName;
+        $image = $req->file('foto_jumbotron');
+        $fileName = $image->getClientOriginalName();
+        $image->move(public_path('img/lembaga/jumbotron/'), $fileName);
+        $data->foto_jumbotron = $fileName;
+        $data->save();
+
+        return redirect('admin/lembaga');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -152,6 +209,20 @@ class AdminController extends Controller
         $data = Program::find($id);
         
         return view('admin.program.edit', ['data' => $data]);
+    }
+
+    public function editGaleri($id)
+    {
+        $data = Galeri::find($id);
+        
+        return view('admin.galeri.edit', ['data' => $data]);
+    }
+
+    public function editLembaga($id)
+    {
+        $data = Lembaga::find($id);
+        
+        return view('admin.lembaga.edit', ['data' => $data]);
     }
 
     public function storeEditWarga(Request $req, $id)
@@ -215,6 +286,47 @@ class AdminController extends Controller
         return redirect('admin/program');
     }
 
+    public function storeEditGaleri(Request $req, $id)
+    {
+        $data = Galeri::find($id);
+        if($req->file('foto') != null) {
+            $image = $req->file('foto');
+            $fileName = $image->getClientOriginalName();
+            $image->move(public_path('img/galeri/'), $fileName);
+            $data->foto = $fileName;
+        }
+        $data->save();
+
+        return redirect('admin/galeri');
+    }
+
+    public function storeEditLembaga(Request $req, $id)
+    {
+        $data = Lembaga::find($id);
+        $data->nama = $req->nama;
+        $data->deskripsi = $req->deskripsi;
+        $data->program_kerja = $req->program_kerja;
+        
+        if($req->file('logo') != null) {
+            $image = $req->file('logo');
+            $fileName = $image->getClientOriginalName();
+            $image->move(public_path('img/lembaga/logo/'), $fileName);
+            $data->logo = $fileName;
+        } 
+        
+        if($req->file('foto_jumbotron') != null) {
+            $image = $req->file('foto_jumbotron');
+            $fileName = $image->getClientOriginalName();
+            $image->move(public_path('img/lembaga/jumbotron/'), $fileName);
+            $data->foto_jumbotron = $fileName;
+        }
+
+        $data->save();
+
+        return redirect('admin/lembaga');
+    }
+
+
     /**
      * Update the specified resource in storage.
      *
@@ -255,5 +367,21 @@ class AdminController extends Controller
         $data->delete();
 
         return redirect('/admin/program');
+    }
+
+    public function deleteGaleri($id)
+    {
+        $data = Galeri::find($id);
+        $data->delete();
+
+        return redirect('/admin/galeri');
+    }
+
+    public function deleteLembaga($id)
+    {
+        $data = Lembaga::find($id);
+        $data->delete();
+
+        return redirect('/admin/lembaga');
     }
 }
