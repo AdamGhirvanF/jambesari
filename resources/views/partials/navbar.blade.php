@@ -17,37 +17,37 @@
                     <div class="nav-link pb-2">
                         <img src="{{ URL::asset('icon/navbar/Profil.svg'); }}"
                             width="18px" class="me-2">
-                        <a href="/profil.html">Profil Desa</a>
+                        <a href="/profil">Profil Desa</a>
                     </div>
                     <div class="nav-link pb-2">
                         <img src="{{ URL::asset('icon/navbar/Struktur.svg'); }}"
                             width="18px" class="me-2">
-                        <a href="/struktur.html">Struktur Desa</a>
+                        <a href="/struktur">Struktur Desa</a>
                     </div>
                     <div class="nav-link pb-2">
                         <img src="{{ URL::asset('icon/navbar/Program.svg'); }}"
                             width="18px" class="me-2">
-                        <a href="/program.html">Program</a>
+                        <a href="/program">Program</a>
                     </div>
                     <div class="nav-link pb-2">
                         <img src="{{ URL::asset('icon/navbar/Berita.svg'); }}"
                             width="18px" class="me-2">
-                        <a href="/berita.html">Berita</a>
+                        <a href="/berita">Berita</a>
                     </div>
                     <div class="nav-link pb-2">
                         <img src="{{ URL::asset('icon/navbar/Galeri.svg'); }}"
                             width="18px" class="me-2">
-                        <a href="/galeri.html">Galeri</a>
+                        <a href="/galeri">Galeri</a>
                     </div>
                     <div class="nav-link pb-2">
                         <img src="{{ URL::asset('icon/navbar/Layanan.svg'); }}"
                             width="18px" class="me-2">
-                        <a href="/layanan.html">Layanan</a>
+                        <a href="/layanan">Layanan</a>
                     </div>
                     <div class="nav-link pb-2">
                         <img src="{{ URL::asset('icon/navbar/Kontak.svg'); }}"
                             width="18px" class="me-2">
-                        <a href="/kontak.html">Kontak</a>
+                        <a href="/kontak">Kontak</a>
                     </div>
                 </ul>
             </div>

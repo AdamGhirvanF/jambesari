@@ -48,3 +48,4 @@ Route::get('/cek-nik', [WargaController::class, 'index']);
 Route::post('/cek-nik-store', [WargaController::class, 'checkNIK']);
 
 Route::get('', [FrontendController::class, 'indexHomepage']);
+Route::get('/berita', [FrontendController::class, 'indexBerita']);

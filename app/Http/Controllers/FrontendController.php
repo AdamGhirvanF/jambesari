@@ -10,4 +10,9 @@ class FrontendController extends Controller
     {
         return view("frontend.index", ["title" => "Website Desa Jambesari"]);
     }
+
+    public function indexBerita()
+    {
+        return view("frontend.berita", ["title" => "Berita Desa Jambesari"]);
+    }
 }
