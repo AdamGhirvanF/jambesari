@@ -3,11 +3,6 @@
 @section("container")
 
     @include("partials.breadcrumb")
-
-    <!-- Kontak -->
-    <div class="kontak p-2 ps-4">
-        <h5 class="title">Kontak</h5>  
-    </div>
     
   <div class="my-4">
     <!--Google map-->

@@ -4,11 +4,6 @@
 
     @include("partials.breadcrumb")
 
-    <!-- Layanan -->
-    <div class="layanan">
-        <h5 class="title p-2 ps-4">Layanan</h5>
-    </div>
-
     <div class="cek-data ps-4">
         <h5 class="title pt-2">Cek Data Kependudukan</h5>
         <p class="text-start">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet.</p>

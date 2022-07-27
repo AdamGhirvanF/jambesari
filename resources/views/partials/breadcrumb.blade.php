@@ -10,3 +10,5 @@
             </nav>
         </div>
         <!-- End Breadcrumb -->
+        
+        <div class="h3 page-title px-3 px-md-5 py-3">{{ $title }}</div>

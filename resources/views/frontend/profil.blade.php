@@ -4,11 +4,6 @@
 
 @include("partials.breadcrumb")
 
-<!-- Profil -->
-<div class="profil">
-    <h5 class="title p-2 ps-4">Profil</h5>
-</div>
-
 <div>
     <h5 class="title text-center p-2">Daftar Kepala Desa Jambesari</h5>
 </div>
@@ -19,7 +14,7 @@
         <thead class="thead">
             <tr>
             <th scope="col">NO.</th>
-            <th scope="col">Tahun Menjabat</th>
+            <th scope="col" class="text-white">Tahun Menjabat</th>
             <th scope="col">Nama Kepala Desa</th>
             </tr>
         </thead>
