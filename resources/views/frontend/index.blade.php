@@ -1,82 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends ('layouts.main')
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Desa Jambesari</title>
-
-        <!-- CSS Bootstrap -->
-        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css'); }}">
-        <!-- CSS Flickity -->
-        <link rel="stylesheet" href="{{ URL::asset('css/flickity.min.css');}}">
-        <!-- Custom Style -->
-        <link rel="stylesheet" href="{{ URL::asset('css/style.css'); }}">
-    </head>
-
-    <body>
-        <!-- HEADER -->
-        <div class="header d-flex justify-content-between">
-            <div class="menu">
-                <a href="#navbar" class="text-white p-4"
-                    data-bs-toggle="offcanvas">
-                    <img src="{{ URL::asset('icon/navbar/Hamburger.svg'); }}" alt="">
-                    Menu
-                </a>
-                <div class="offcanvas offcanvas-start" tabindex="-1"
-                    id="navbar">
-                    <div class="offcanvas-header justify-content-end">
-                        <button type="button" class="btn-close"
-                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="nav">
-                            <div class="nav-link pb-2">
-                                <img src="{{ URL::asset('icon/navbar/Profil.svg'); }}"
-                                    width="18px" class="me-2">
-                                <a href="/profil.html">Profil Desa</a>
-                            </div>
-                            <div class="nav-link pb-2">
-                                <img src="{{ URL::asset('icon/navbar/Struktur.svg'); }}"
-                                    width="18px" class="me-2">
-                                <a href="/struktur.html">Struktur Desa</a>
-                            </div>
-                            <div class="nav-link pb-2">
-                                <img src="{{ URL::asset('icon/navbar/Program.svg'); }}"
-                                    width="18px" class="me-2">
-                                <a href="/program.html">Program</a>
-                            </div>
-                            <div class="nav-link pb-2">
-                                <img src="{{ URL::asset('icon/navbar/Berita.svg'); }}"
-                                    width="18px" class="me-2">
-                                <a href="/berita.html">Berita</a>
-                            </div>
-                            <div class="nav-link pb-2">
-                                <img src="{{ URL::asset('icon/navbar/Galeri.svg'); }}"
-                                    width="18px" class="me-2">
-                                <a href="/galeri.html">Galeri</a>
-                            </div>
-                            <div class="nav-link pb-2">
-                                <img src="{{ URL::asset('icon/navbar/Layanan.svg'); }}"
-                                    width="18px" class="me-2">
-                                <a href="/layanan.html">Layanan</a>
-                            </div>
-                            <div class="nav-link pb-2">
-                                <img src="{{ URL::asset('icon/navbar/Kontak.svg'); }}"
-                                    width="18px" class="me-2">
-                                <a href="/kontak.html">Kontak</a>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="logo bg-white p-3">
-                <a href="#"><img src="{{ URL::asset('img/logo-header.png'); }}" alt="Logo"></a>
-            </div>
-        </div>
-        <!-- END HEADER -->
-
+@section('container')
         <!-- BANNER -->
         <div class="banner">
             <img src="{{ URL::asset ('img/index/banner.png'); }}" alt="Banner" width="100%">
@@ -84,7 +8,7 @@
             <a href="/layanan.html">
                 <div class="btn link-layanan text-white text-center">
                     Lihat Semua Layanan
-                    <img src="{{ URL::asset('icon/banner/Category.svg'); }} class="ms-2">
+                    <img src="{{ URL::asset('icon/banner/Category.svg'); }}" class="ms-2">
                 </div>
             </a>
         </div>
@@ -262,47 +186,4 @@
             </div>
         </div>
         <!-- END LEMBAGA -->
-
-        <!-- FOOTER -->
-        <footer class="text-white p-4">
-            <div class="d-flex justify-content-between">
-                <div class="detail">
-                    <img src="{{ URL::asset('img/footer/logo-web.png'); }}" alt="Desa
-                        Jambesari" class="ps-3">
-                    <div class="address mt-3">
-                        Krajan, Jambesari, Kec. Jambesari Darus Sholah, <br>Kabupaten
-                        Bondowoso, Jawa Timur 68263
-                    </div>
-                </div>
-                <div class="my-4 social-media d-flex">
-                    <h4>Media Center</h4>
-                    <div id="facebook">
-                        <img src="{{ URL::asset('icon/footer/facebook.svg'); }}" width="15px"
-                            class="me-2">
-                        <a href="#">Facebook</a>
-                    </div>
-                    <div id="twitter">
-                        <img src="{{ URL::asset('icon/footer/twitter.svg'); }}" width="15px"
-                            class="me-2">
-                        <a href="#">Twitter</a>
-                    </div>
-                    <div id="instagram">
-                        <img src="{{ URL::asset('icon/footer/instagram.svg'); }}" width="15px"
-                            class="me-2">
-                        <a href="#">Instagram</a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                Copyright © 2020. KKNFILKOMUB. All rights reserved.
-            </div>
-        </footer>
-        <!-- END FOOTER -->
-
-        <!-- JS Bootstrap -->
-        <script src="{{ URL::asset('js/bootstrap.min.js');}}"></script>
-        <!-- JS Flickity -->
-        <script src="{{ URL::asset('js/flickity.min.js');}}"></script>
-    </body>
-
-</html>
+@endsection

@@ -8,6 +8,6 @@ class FrontendController extends Controller
 {
     public function indexHomepage()
     {
-        return view('frontend.index');
+        return view("frontend.index", ["title" => "Website Desa Jambesari"]);
     }
 }
