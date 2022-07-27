@@ -735,11 +735,7 @@ footer a {
     .nav-link {
         height: 100%;
     }
-
-    .nav-link:hover {
-        background-color: red;
-    }
-
+    
     .nav-link a {
         color: white;
     }

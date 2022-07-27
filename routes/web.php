@@ -48,3 +48,8 @@ Route::get('/cek-nik', [WargaController::class, 'index']);
 Route::post('/cek-nik-store', [WargaController::class, 'checkNIK']);
 
 Route::get('', [FrontendController::class, 'indexHomepage']);
+Route::get('/profil', [FrontendController::class, 'profilDesa']);
+Route::get('/struktur', [FrontendController::class, 'strukturDesa']);
+Route::get('/galeri', [FrontendController::class, 'galeriDesa']);
+Route::get('/layanan', [FrontendController::class, 'layananDesa']);
+Route::get('/kontak', [FrontendController::class, 'kontakDesa']);
