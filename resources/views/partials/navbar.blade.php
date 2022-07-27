@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="logo bg-white p-3">
-        <a href="#"><img src="{{ URL::asset('img/logo-header.png'); }}" alt="Logo"></a>
+        <a href="/"><img src="{{ URL::asset('img/logo-header.png'); }}" alt="Logo"></a>
     </div>
 </div>
 <!-- END HEADER -->

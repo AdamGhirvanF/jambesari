@@ -142,7 +142,7 @@
             <div class="h5 mb-4 section-title">Lembaga Desa</div>
             <div class="wrapper">
                 <div class="item me-2">
-                    <a href="/page/lembaga/bumdes.html">
+                    <a href="/lembaga/bumdes">
                         <img src="{{ URL::asset('img/index/lembaga/bumdes.png'); }}" class="p-3"
                             alt="1">
                     </a>

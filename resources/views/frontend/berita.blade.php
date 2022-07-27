@@ -27,7 +27,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">Senin, 22 Juni 2022</div>
-                                <a href="/page/berita/one.html" class="stretched-link title">Ada Apa
+                                <a href="/berita/one" class="stretched-link title">Ada Apa
                                     Dengan Cinta?</a>
                                 <div class="content mb-3">Lorem ipsum dolor sit,
                                     amet
@@ -38,7 +38,7 @@
                                     repudiandae dolores assumenda suscipit
                                     officiis?</div>
                                 <div class="next">
-                                    <a href="/page/berita/one.html" class="stretched-link">Baca
+                                    <a href="/berita/one" class="stretched-link">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">Senin, 22 Juni 2022</div>
-                                <a href="/page/berita/one.html" class="stretched-link title">Ada Apa
+                                <a href="/berita/one" class="stretched-link title">Ada Apa
                                     Dengan Cinta?</a>
                                 <div class="content mb-3">Lorem ipsum dolor sit,
                                     amet
@@ -63,7 +63,7 @@
                                     repudiandae dolores assumenda suscipit
                                     officiis?</div>
                                 <div class="next">
-                                    <a href="/page/berita/one.html" class="stretched-link">Baca
+                                    <a href="/berita/one" class="stretched-link">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">Senin, 22 Juni 2022</div>
-                                <a href="/page/berita/one.html" class="stretched-link title">Ada Apa
+                                <a href="/berita/one" class="stretched-link title">Ada Apa
                                     Dengan Cinta?</a>
                                 <div class="content mb-3">Lorem ipsum dolor sit,
                                     amet
@@ -87,7 +87,7 @@
                                     repudiandae dolores assumenda suscipit
                                     officiis?</div>
                                 <div class="next">
-                                    <a href="/page/berita/one.html" class="stretched-link">Baca
+                                    <a href="/berita/one" class="stretched-link">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">Senin, 22 Juni 2022</div>
-                                <a href="/page/berita/one.html" class="stretched-link title">Ada Apa
+                                <a href="/berita/one" class="stretched-link title">Ada Apa
                                     Dengan Cinta?</a>
                                 <div class="content mb-3">Lorem ipsum dolor sit,
                                     amet
@@ -110,7 +110,7 @@
                                     repudiandae dolores assumenda suscipit
                                     officiis?</div>
                                 <div class="next">
-                                    <a href="/page/berita/one.html" class="stretched-link">Baca
+                                    <a href="/berita/one" class="stretched-link">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">Senin, 22 Juni 2022</div>
-                                <a href="/page/berita/one.html" class="stretched-link title">Ada Apa
+                                <a href="/berita/one" class="stretched-link title">Ada Apa
                                     Dengan Cinta?</a>
                                 <div class="content mb-3">Lorem ipsum dolor sit,
                                     amet
@@ -133,7 +133,7 @@
                                     repudiandae dolores assumenda suscipit
                                     officiis?</div>
                                 <div class="next">
-                                    <a href="/page/berita/one.html" class="stretched-link">Baca
+                                    <a href="/berita/one" class="stretched-link">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">Senin, 22 Juni 2022</div>
-                                <a href="/page/berita/one.html" class="stretched-link title">Ada Apa
+                                <a href="/berita/one" class="stretched-link title">Ada Apa
                                     Dengan Cinta?</a>
                                 <div class="content mb-3">Lorem ipsum dolor sit,
                                     amet
@@ -156,7 +156,7 @@
                                     repudiandae dolores assumenda suscipit
                                     officiis?</div>
                                 <div class="next">
-                                    <a href="/page/berita/one.html" class="stretched-link">Baca
+                                    <a href="/berita/one" class="stretched-link">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
