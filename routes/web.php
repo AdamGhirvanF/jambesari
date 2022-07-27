@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WargaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FrontendController;
 
 Route::get('/login', [AuthController::class, 'indexLogin'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout']);
@@ -45,3 +46,5 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 });
 Route::get('/cek-nik', [WargaController::class, 'index']);
 Route::post('/cek-nik-store', [WargaController::class, 'checkNIK']);
+
+Route::get('', [FrontendController::class, 'indexHomepage']);
