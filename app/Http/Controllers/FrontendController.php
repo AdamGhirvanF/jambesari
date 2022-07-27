@@ -30,4 +30,24 @@ class FrontendController extends Controller
     public function kontakDesa() {
         return view("frontend.kontak", ["title" => "Kontak"]);
     }
+
+    public function indexBerita()
+    {
+        return view("frontend.berita", ["title" => "Berita Desa Jambesari"]);
+    }
+
+    public function isiBerita()
+    {
+        return view("frontend.page.berita.one", ["title" => "Berita Desa Jambesari"]);
+    }
+
+    public function indexBumdes()
+    {
+        return view("frontend.page.lembaga.bumdes", ["title" => "BUM Desa Jambesari"]);
+    }
+
+    public function indexProgram()
+    {
+        return view("frontend.program", ["title" => "Program Desa Jambesari"]);
+    }
 }

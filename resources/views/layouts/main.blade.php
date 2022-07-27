@@ -27,6 +27,7 @@
     <script src="{{ URL::asset('js/bootstrap.min.js');}}"></script>
     <!-- JS Flickity -->
     <script src="{{ URL::asset('js/flickity.min.js');}}"></script>
+
 </body>
 
 </html>
