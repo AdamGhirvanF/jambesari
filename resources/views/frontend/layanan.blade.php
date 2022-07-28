@@ -14,8 +14,10 @@
         <form action="/cek-nik-store" method="post">
           @csrf
             <input class="form-control border-form" type="text" name="nik" placeholder="Masukkan NIK atau Nama">
-            <button type="submit" class="btn btn-forms mt-3">Submit</button>
-            <a href="/layanan" class="btn bg-white btn-forms mt-3 reset" onclick="resetInput()">Reset</a>
+            <div class="text-center">
+              <button type="submit" class="btn btn-forms mt-3">Submit</button>
+              <a href="/layanan" class="btn bg-white btn-forms mt-3 reset" onclick="resetInput()" style="color: #A3AAD1">Reset</a>
+            </div>
         </form>
       </div>
     </div>
@@ -37,7 +39,7 @@
                     <th scope="col">TGL_LAHIR</th>
                     <th scope="col">GDR</th>
                     <th scope="col">AGAMA</th>
-                    <th scope="col">15543</th>
+                    <th scope="col">NO. RUMAH</th>
                     <th scope="col">ST_KAWIN</th>
                     <th scope="col">SHDRT</th>
                     <th scope="col">PDDKN</th>
