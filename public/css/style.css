@@ -254,12 +254,9 @@ footer a {
     border: none;
 }
 
-.berita .thumbnail {
-    width: 100%;
-}
-
-.berita .thumbnail img {
-    max-width: 100%;
+.berita .card-img-top {
+    height: 300px;
+    object-fit: cover;
 }
 
 .berita a.title,
@@ -341,12 +338,9 @@ footer a {
     border: none;
 }
 
-.program .thumbnail {
-    width: 100%;
-}
-
-.program .thumbnail img {
-    max-width: 100%;
+.program .card-img-top {
+    height: 300px;
+    object-fit: cover;
 }
 
 .program .title {
@@ -388,7 +382,6 @@ footer a {
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
-    height:0;
 }
     
 .map-container iframe{
@@ -410,10 +403,19 @@ footer a {
     font-size: 20px;
     font-weight: bold;
 }
-/* 
+
+.form-layanan {
+    margin:0 auto;
+}
+
 .form-layanan .forms {
-    width:450px;
-} */
+    min-width:50%;
+    margin:0 auto;
+}
+
+.form-layanan .form-control {
+    padding: 0.75em;
+}
 
 .form-layanan .border-form {
     border: 2px solid rgba(163, 170, 209, 1);
@@ -422,19 +424,30 @@ footer a {
 
 .form-layanan .btn-forms {
     background: rgba(163, 170, 209, 1);
-    width:49%;
-    margin:0 auto;
+    min-width: 49%;
     color: white;
     font-weight: bold;
+    padding: 0.75em;
+    margin: 0.3%;
+    border: 1px solid #A3AAD1;
 }
+
+
 
 .form-layanan button.reset {
     color: var(--first-color);
     border: var(--first-color) 2px solid;
 }
 
-.btn-forms:hover {
+.form-layanan .btn-forms:hover {
     background: white;
+    border: 2px solid rgba(163, 170, 209, 1);
+    color: #A3AAD1;
+}
+
+.form-layanan .btn-forms2:hover {
+    background: #A3AAD1 !important;
+    color: white !important;
     border: 2px solid rgba(163, 170, 209, 1);
 }
 

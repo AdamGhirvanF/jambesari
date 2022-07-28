@@ -49,19 +49,19 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000">
                         <img src="{{ URL::asset('img/index/galeri/1.png'); }}" class="d-block
-                            w-100" alt="...">
+                            w-100 h-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img src="{{ URL::asset('img/index/galeri/2.png'); }}" class="d-block
-                            w-100" alt="...">
+                            w-100 h-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img src="{{ URL::asset('img/index/galeri/1.png'); }}" class="d-block
-                            w-100" alt="...">
+                            w-100 h-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img src="{{ URL::asset('img/index/galeri/2.png'); }}" class="d-block
-                            w-100" alt="...">
+                            w-100 h-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button"

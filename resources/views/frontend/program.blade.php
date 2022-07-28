@@ -8,8 +8,8 @@
                     @foreach($data as $d)
                     <div class="col-md-4">
                         <div class="card d-flex mb-3">
-                            <div class="thumbnail">
-                                <img src="{{ URL::asset('img/program/'. $d->foto);}}" alt="Berita 1">
+                            <div class="thumbnail">   
+                                <img src="{{ URL::asset('img/program/'. $d->foto);}}"  class="card-img-top" alt="Berita 1">
                             </div>
                             <div class="card-body">
                                 <div class="title mb-3">{{$d->title}}</div>
