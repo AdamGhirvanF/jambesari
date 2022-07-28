@@ -56,6 +56,7 @@ class FrontendController extends Controller
 
     public function indexProgram()
     {
-        return view("frontend.program", ["title" => "Program Desa"]);
+        $data = Program::all();
+        return view("frontend.program", ["title" => "Program Desa", 'data' => $data]);
     }
 }

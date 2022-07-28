@@ -63,7 +63,7 @@
                         </div>
                         <div class="form-group">
                         <label for="">Foto</label>
-                        <input type="file" class="form-control" id="" required name="foto">
+                        <input type="file" class="form-control" id="" required name="foto" accept="image/*">
                         </div>
                     </div>
                     <!-- /.card-body -->
