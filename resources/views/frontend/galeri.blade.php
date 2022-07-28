@@ -6,12 +6,30 @@
 
     <div class="container galeri p-4 my-4 mx-auto">
     <div class="row">
-    @foreach($data as $d)
-      
-      <div class="column">
-        <img src="{{ URL::asset('img/galeri/'. $d->foto);}}">
-      </div>
-    @endforeach
+    <div class="column">
+      @for($i = 0; $i < count($data); $i += 4)
+        <img src="{{ URL::asset('img/galeri/'. $data[$i]->foto);}}">
+      @endfor
+    </div>
+
+    <div class="column">
+      @for($i = 1; $i < count($data); $i += 4)
+        <img src="{{ URL::asset('img/galeri/'. $data[$i]->foto);}}">
+      @endfor
+    </div>
+
+    <div class="column">
+    @for($i = 2; $i < count($data); $i += 4)
+        <img src="{{ URL::asset('img/galeri/'. $data[$i]->foto);}}">
+      @endfor
+    </div>
+
+    <div class="column">
+    @for($i = 3; $i < count($data); $i += 4)
+        <img src="{{ URL::asset('img/galeri/'. $data[$i]->foto);}}">
+      @endfor
+    </div>
+
     </div>
     </div>
     
