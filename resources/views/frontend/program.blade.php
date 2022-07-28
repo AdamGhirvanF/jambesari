@@ -8,7 +8,7 @@
                     <div class="col-md-4">
                         <div class="card d-flex mb-3">
                             <div class="thumbnail">
-                                <img src="{{ URL::asset('img/berita/thumbnail/1.png');}}" alt="Berita 1">
+                                <img src="{{ URL::asset('img/gallery/1.png');}}" class="card-img-top" alt="Berita 1">
                             </div>
                             <div class="card-body">
                                 <div class="title mb-3">Ada Apa
