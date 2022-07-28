@@ -39,7 +39,7 @@
                     <th scope="col">TGL_LAHIR</th>
                     <th scope="col">GDR</th>
                     <th scope="col">AGAMA</th>
-                    <th scope="col">15543</th>
+                    <th scope="col">NO. RUMAH</th>
                     <th scope="col">ST_KAWIN</th>
                     <th scope="col">SHDRT</th>
                     <th scope="col">PDDKN</th>
