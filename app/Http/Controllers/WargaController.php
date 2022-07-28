@@ -16,6 +16,6 @@ class WargaController extends Controller
     {
         $nokk = Warga::where('nik', 'LIKE', '%'.$req->search.'%')->orWhere('nama', 'LIKE', '%'.$req->search.'%')->first();
         $warga = Warga::where('nokk', $nokk->nokk)->get();
-        return view("cek-nik", ['warga' => $warga]);
+        return view("frontend.layanan", ['title' => 'Layanan NIK', 'warga' => $warga]);
     }
 }

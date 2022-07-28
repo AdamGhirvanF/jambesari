@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Warga;
+use App\Models\Berita;
+use App\Models\Program;
+use App\Models\Lembaga;
+use App\Models\Galeri;
 
 class FrontendController extends Controller
 {
@@ -20,6 +25,7 @@ class FrontendController extends Controller
     }
 
     public function galeriDesa() {
+        $data = Galeri::paginate();
         return view("frontend.galeri", ["title" => "Galeri"]);
     }
 
@@ -33,7 +39,8 @@ class FrontendController extends Controller
 
     public function indexBerita()
     {
-        return view("frontend.berita", ["title" => "Berita"]);
+        $data = Berita::paginate(6);
+        return view("frontend.berita", ["title" => "Berita", "data" => $data]);
     }
 
     // satu berita

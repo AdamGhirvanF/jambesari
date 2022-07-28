@@ -11,19 +11,20 @@
 
     <div class="form-layanan p-4">
       <div class="forms">
-        <form>
-            <input class="form-control border-form" type="text" placeholder="Masukkan NIK atau Nama">
+        <form action="/cek-nik-store" method="post">
+          @csrf
+            <input class="form-control border-form" type="text" name="nik" placeholder="Masukkan NIK atau Nama">
+            <button type="submit" class="btn btn-forms mt-3">Submit</button>
+            <a href="/layanan" class="btn bg-white btn-forms mt-3 reset" onclick="resetInput()">Reset</a>
         </form>
-
-        <button type="submit" class="btn btn-forms mt-3">Submit</button>
-        <button type="submit" class="btn bg-white btn-forms mt-3 reset" onclick="resetInput()">Reset</button>
       </div>
     </div>
     <!-- End Layanan -->
 
     <!-- Table -->
+    @if(isset($warga))
         <div class="table-responsive text-center">
-            <table class="table  table-bordered table-hover">
+            <table class="table table-bordered table-hover">
                 <thead class="thead">
                     <tr>
                     <th scope="col">NO.</th>
@@ -50,80 +51,36 @@
                     </tr>
                 </thead>
                 <tbody>
+                  @foreach($warga as $key => $w)
                     <tr>
-                    <th scope="row">1</th>
-                    <td>NIK</td>
-                    <td>NO. KK</td>
-                    <td>NMKK</td>
-                    <td>NAMA</td>
-                    <td>JK</td>
-                    <td>TMP_LAHIR</td>
-                    <td>TGL_LAHI</td>
-                    <td>GDR</td>
-                    <td>AGAMA</td>
-                    <td>15543</td>
-                    <td>ST_KAWIN</td>
-                    <td>SHDRT</td>
-                    <td>PDDKN</td>
-                    <td>PRKJAAN</td>
-                    <td>IBU</td>
-                    <td>AYAH</td>
-                    <td>NO_HP</td>
-                    <td>DUSUN</td>
-                    <td>RT</td>
-                    <td>RW</td>
+                      <td>{{$key+=1}}</td>
+                      <td>{{substr($w->nik, 0, 8)}}********</td>
+                      <td>{{substr($w->nokk, 0, 8)}}********</td>
+                      <td>{{$w->nmkk}}</td>
+                      <td>{{$w->nama}}</td>
+                      <td>{{$w->jk}}</td>
+                      <td>{{$w->tmp_lahir}}</td>
+                      <td>{{$w->tgl_lahir}}</td>
+                      <td>{{$w->gdr}}</td>
+                      <td>{{$w->agama}}</td>
+                      <td>{{$w->satulimalima}}</td>
+                      <td>{{$w->st_kawin}}</td>
+                      <td>{{$w->shdrt}}</td>
+                      <td>{{$w->pddkn}}</td>
+                      <td>{{$w->pkrjaan}}</td>
+                      <td>{{$w->ibu}}</td>
+                      <td>{{$w->ayah}}</td>
+                      <td>{{$w->no_hp}}</td>
+                      <td>{{$w->dusun}}</td>
+                      <td>{{$w->rt}}</td>
+                      <td>{{$w->rw}}</td>
                     </tr>
-                <!-- EXAMPLE -->
-                    <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    </tr>
-                <!-- END EXAMPLE -->
+                    @endforeach
+                  
                 </tbody>
             </table>
         </div>
+        @endif
     <!-- End Table -->
     
     <!-- Pengajuan -->
