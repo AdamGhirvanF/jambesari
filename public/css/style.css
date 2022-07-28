@@ -388,7 +388,6 @@ footer a {
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
-    height:0;
 }
     
 .map-container iframe{
@@ -416,7 +415,7 @@ footer a {
 }
 
 .form-layanan .forms {
-    width:50%;
+    min-width:50%;
     margin:0 auto;
 }
 
@@ -427,7 +426,7 @@ footer a {
 
 .form-layanan .btn-forms {
     background: rgba(163, 170, 209, 1);
-    width: 49%;
+    min-width: 49%;
     color: white;
     font-weight: bold;
     border: 1px solid #A3AAD1;
