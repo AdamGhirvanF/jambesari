@@ -254,12 +254,9 @@ footer a {
     border: none;
 }
 
-.berita .thumbnail {
-    width: 100%;
-}
-
-.berita .thumbnail img {
-    max-width: 100%;
+.berita .card-img-top {
+    height: 300px;
+    object-fit: cover;
 }
 
 .berita a.title,
@@ -341,12 +338,9 @@ footer a {
     border: none;
 }
 
-.program .thumbnail {
-    width: 100%;
-}
-
-.program .thumbnail img {
-    max-width: 100%;
+.program .card-img-top {
+    height: 300px;
+    object-fit: cover;
 }
 
 .program .title {
