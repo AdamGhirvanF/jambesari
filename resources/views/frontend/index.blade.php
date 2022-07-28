@@ -27,24 +27,11 @@
         <div class="galeri px-md-5 py-4">
             <div class="h5 mb-4 section-title">Seputar Jambesari</div>
             <div class="carousel web" data-flickity='{"wrapAround" : true,"autoPlay" : true }'>
+                @foreach($carousel as $c)
                 <div class="carousel-cell">
-                    <img src="{{ URL::asset('img/index/galeri/1.png'); }}" alt="" width="100%">
+                    <img src="{{ URL::asset('img/galeri/'.$c->foto); }}" alt="" width="100%">
                 </div>
-                <div class="carousel-cell">
-                    <img src="{{ URL::asset('img/index/galeri/2.png'); }}" alt="" width="100%">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ URL::asset('img/index/galeri/1.png'); }}" alt="" width="100%">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ URL::asset('img/index/galeri/2.png'); }}" alt="" width="100%">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ URL::asset('img/index/galeri/1.png'); }}" alt="" width="100%">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ URL::asset('img/index/galeri/2.png'); }}" alt="" width="100%">
-                </div>
+                @endforeach
             </div>
             <div id="galeri-jambesari" class="carousel slide mobile"
                 data-bs-ride="true">

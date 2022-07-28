@@ -13,7 +13,8 @@ class FrontendController extends Controller
 {
     public function indexHomepage()
     {
-        return view("frontend.index", ["title" => "Beranda"]);
+        $carousel = Galeri::all()->take(6);
+        return view("frontend.index", ["title" => "Beranda", 'carousel' => $carousel]);
     }
 
     public function profilDesa() {
