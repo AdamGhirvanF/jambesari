@@ -254,12 +254,9 @@ footer a {
     border: none;
 }
 
-.berita .thumbnail {
-    width: 100%;
-}
-
-.berita .thumbnail img {
-    max-width: 100%;
+.berita .card-img-top {
+    height: 300px;
+    object-fit: cover;
 }
 
 .berita a.title,
