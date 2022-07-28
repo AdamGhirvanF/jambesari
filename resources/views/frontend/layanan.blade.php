@@ -14,8 +14,10 @@
         <form action="/cek-nik-store" method="post">
           @csrf
             <input class="form-control border-form" type="text" name="nik" placeholder="Masukkan NIK atau Nama">
-            <button type="submit" class="btn btn-forms mt-3">Submit</button>
-            <a href="/layanan" class="btn bg-white btn-forms mt-3 reset" onclick="resetInput()">Reset</a>
+            <div class="text-center">
+              <button type="submit" class="btn btn-forms mt-3">Submit</button>
+              <a href="/layanan" class="btn bg-white btn-forms mt-3 reset" onclick="resetInput()" style="color: #A3AAD1">Reset</a>
+            </div>
         </form>
       </div>
     </div>
