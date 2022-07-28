@@ -25,8 +25,8 @@ class FrontendController extends Controller
     }
 
     public function galeriDesa() {
-        $data = Galeri::paginate();
-        return view("frontend.galeri", ["title" => "Galeri"]);
+        $data = Galeri::all();
+        return view("frontend.galeri", ["title" => "Galeri", 'data' => $data]);
     }
 
     public function layananDesa() {

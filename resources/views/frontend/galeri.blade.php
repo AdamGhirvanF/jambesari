@@ -6,31 +6,11 @@
 
     <div class="container galeri p-4 my-4 mx-auto">
     <div class="row">
+    @foreach($data as $d)
       <div class="column">
-
-        <img src="{{ URL::asset('img/gallery/gal_1.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_2.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_3.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_4.png');}}">
+        <img src="{{ URL::asset('img/galeri/'. $d->foto);}}">
       </div>
-      <div class="column">
-        <img src="{{ URL::asset('img/gallery/gal_3.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_1.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_2.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_4.png');}}">
-      </div>
-      <div class="column">
-        <img src="{{ URL::asset('img/gallery/gal_2.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_4.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_3.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_1.png');}}">
-      </div>
-      <div class="column">
-        <img src="{{ URL::asset('img/gallery/gal_3.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_4.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_2.png');}}">
-        <img src="{{ URL::asset('img/gallery/gal_1.png');}}">
-      </div>
+    @endforeach
     </div>
     </div>
     
