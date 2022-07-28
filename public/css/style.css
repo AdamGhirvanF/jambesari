@@ -410,10 +410,15 @@ footer a {
     font-size: 20px;
     font-weight: bold;
 }
-/* 
+
+.form-layanan {
+    margin:0 auto;
+}
+
 .form-layanan .forms {
-    width:450px;
-} */
+    width:50%;
+    margin:0 auto;
+}
 
 .form-layanan .border-form {
     border: 2px solid rgba(163, 170, 209, 1);
@@ -422,10 +427,10 @@ footer a {
 
 .form-layanan .btn-forms {
     background: rgba(163, 170, 209, 1);
-    width:49%;
-    margin:0 auto;
+    width: 49%;
     color: white;
     font-weight: bold;
+    border: 1px solid #A3AAD1;
 }
 
 .form-layanan button.reset {
@@ -433,9 +438,10 @@ footer a {
     border: var(--first-color) 2px solid;
 }
 
-.btn-forms:hover {
+.form-layanan .btn-forms:hover {
     background: white;
     border: 2px solid rgba(163, 170, 209, 1);
+    color: #A3AAD1;
 }
 
 .table {
