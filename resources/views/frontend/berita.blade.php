@@ -11,7 +11,7 @@
                     <div class="col-md-4">
                         <div class="card d-flex mb-3">
                             <div class="thumbnail">
-                                <img src="{{ URL::asset('img/berita/'. $d->foto);}}" alt="Berita 1">
+                                <img src="{{ URL::asset('img/berita/'. $d->foto);}}" class="card-img-top" alt="Berita 1">
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">{{ \Carbon\Carbon::parse($d->created_at)->format('l, d F Y') }}</div>
