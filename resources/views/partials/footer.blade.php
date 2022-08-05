@@ -14,17 +14,17 @@
             <div id="facebook">
                 <img src="{{ URL::asset('icon/footer/facebook.svg'); }}" width="15px"
                     class="me-2">
-                <a href="#">Facebook</a>
+                <a href="https://www.facebook.com/Jambesarimedia" target="_blank">Facebook</a>
             </div>
             <div id="twitter">
                 <img src="{{ URL::asset('icon/footer/twitter.svg'); }}" width="15px"
                     class="me-2">
-                <a href="#">Twitter</a>
+                <a href="https://www.instagram.com/jambesarimedia/" target="_blank">Twitter</a>
             </div>
             <div id="instagram">
                 <img src="{{ URL::asset('icon/footer/instagram.svg'); }}" width="15px"
                     class="me-2">
-                <a href="#">Instagram</a>
+                <a href="https://twitter.com/JambesariMedia" target="_blank">Instagram</a>
             </div>
         </div>
     </div>
