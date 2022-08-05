@@ -7,9 +7,9 @@
                 <nav style="--bs-breadcrumb-divider: '>';"
                     aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/index">Beranda</a></li>
+                        <li class="breadcrumb-item"><a href="/">Beranda</a></li>
                         <li class="breadcrumb-item" aria-current="page"><a
-                                href="#">Lembaga Desa</a></li>
+                                href="/">Lembaga Desa</a></li>
                         <li class="breadcrumb-item active" aria-current="page">BUMDes</li>
                     </ol>
                 </nav>
