@@ -35,16 +35,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="foto">
-                <img src="" alt="Struktur">
-            </div>
-            <div class="h3 page-title px-3 px-md-5 py-3">Visi</div>
-            <div class="container mb-3 content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae error doloribus quos temporibus placeat illo debitis libero laborum molestias, rem laboriosam enim, suscipit obcaecati? Vero dolor sequi temporibus atque corrupti.
-            </div>
-            <div class="h3 page-title px-3 px-md-5 py-3">Misi</div>
-            <div class="container mb-3 content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eius repellat, saepe vitae ducimus provident, nisi sunt at unde autem ipsa blanditiis nobis? Ut iste est laborum? Porro, optio fugit?
+            <div class="foto text-center">
+                <img class="img-fluid p-4" src="{{ URL::asset('img/struktur/struktur.png');}}" alt="Struktur">
             </div>
         </div>
 

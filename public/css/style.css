@@ -368,6 +368,10 @@ footer a {
     height: 10vh;
 }
 
+.foto {
+    background-color: var(--third-color);
+}
+
 /* Profil Style */
 
 .profil{
@@ -899,6 +903,10 @@ footer a {
 
     .struktur .content {
         font-size: 16px;
+    }
+
+    .foto {
+        background-color: var(--third-color);
     }
 
     /* Profil Style */
