@@ -26,14 +26,14 @@
         <!-- GALERI -->
         <div class="galeri px-md-5 py-4">
             <div class="h5 mb-4 section-title">Seputar Jambesari</div>
-            <div class="carousel web" data-flickity='{"wrapAround" : true,"autoPlay" : true }'>
+            <div class="carousel" data-flickity='{"wrapAround" : true,"autoPlay" : true }'>
                 @foreach($carousel as $c)
                 <div class="carousel-cell">
-                    <img src="{{ URL::asset('img/galeri/'.$c->foto); }}" alt="" width="100%">
+                    <img src="{{ URL::asset('img/galeri/'.$c->foto); }}">
                 </div>
                 @endforeach
             </div>
-            <div id="galeri-jambesari" class="carousel slide mobile"
+            <!-- <div id="galeri-jambesari" class="carousel slide mobile"
                 data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#galeri-jambesari"
@@ -48,21 +48,15 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="{{ URL::asset('img/index/galeri/1.png'); }}" class="d-block
+                        <img src="{{ URL::asset('img/galeri/1.png'); }}" class="d-block
                             w-100 h-100" alt="...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{ URL::asset('img/index/galeri/2.png'); }}" class="d-block
-                            w-100 h-100" alt="...">
+                    @foreach($carousel as $c)
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="{{ URL::asset('img/galeri/1.png'); }}" class="d-block
+                            w-100" alt="...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{ URL::asset('img/index/galeri/1.png'); }}" class="d-block
-                            w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ URL::asset('img/index/galeri/2.png'); }}" class="d-block
-                            w-100 h-100" alt="...">
-                    </div>
+                    @endforeach
                 </div>
                 <button class="carousel-control-prev" type="button"
                     data-bs-target="#galeri-jambesari" data-bs-slide="prev">
@@ -74,7 +68,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            </div>
+            </div> -->
         </div>
         <!-- END GALERI -->
 

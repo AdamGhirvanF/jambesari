@@ -39,10 +39,6 @@
               <input type="email" class="form-control" id="exampleInputEmail" required>
             </div>
             <div class="form-group">
-                <label for="exampleInputWebsite">Website (jika ada)</label>
-                <input type="text" class="form-control" id="exampleInputWebsite">
-            </div>
-            <div class="form-group">
                 <label for="exampleInputPerihal">Perihal <span>*</span></label>
                 <input type="text" class="form-control" id="exampleInputPerihal" required>
             </div>
