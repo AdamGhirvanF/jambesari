@@ -13,13 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lembagas', function (Blueprint $table) {
+        Schema::create('program_lembagas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('deskripsi');
-            $table->string('logo');
-            $table->string('foto_jumbotron');
+            $table->string('title');
+            $table->string('description');
+            $table->unsignedBigInteger('lembaga_id');
             $table->timestamps();
+
+            $table->foreign('lembaga_id')->references('id')->on('lembagas');
         });
     }
 
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lembagas');
+        Schema::dropIfExists('program_lembagas');
     }
 };

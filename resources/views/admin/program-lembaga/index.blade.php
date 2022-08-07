@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta required name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Desa Jambesari</title>
 
   <!-- Google Font: Source Sans Pro -->
@@ -19,76 +19,75 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
-  @include('admin.sidebar')
+ @include('admin.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <section class="content-header">
-        <div class="container-fluid">
+      <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6">
-            <h1>Ubah Data Lembaga</h1>
-            </div>
-            <div class="col-sm-6">
+          <div class="col-sm-6">
+            <h1>Data Program Lembaga</h1>
+          </div>
+          <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Lembaga</li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Program Lembaga</li>
             </ol>
-            </div>
+          </div>
         </div>
-        </div><!-- /.container-fluid -->
+      </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                    <div class="col-md-12">
-                <!-- general form elements -->
-                <div class="card card-primary">
-                    <div class="card-header">
-                    <h3 class="card-title">Ubah Data Lembaga </h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <!-- form start -->
-                    <form action="/admin/lembaga/edit-store/{{ $data->id }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                    <div class="card-body">
-                        <div class="form-group">
-                          <label for="">Nama</label>
-                          <input type="text" class="form-control" id="" placeholder="Nama" value="{{$data->nama}}" required name="nama">
-                        </div>
-                        <div class="form-group">
-                          <label for="">Deskripsi</label>
-                          <input type="text" class="form-control" id="" placeholder="Deskripsi" value="{{$data->deskripsi}}" required name="deskripsi">
-                        </div>
-                        <div class="form-group">
-                          <label for="">Logo Lembaga Saat Ini</label><br>
-                          <img src="/img/lembaga/logo/{{$data->logo}}" alt="" style="width:50%;height:50%;"> <br> <br>
-                          <label for="">Update Logo Lembaga</label>
-                          <input type="file" class="form-control" id="" name="logo" accept="image/*">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Foto Jumbotron Saat Ini</label><br>
-                          <img src="/img/lembaga/jumbotron/{{$data->foto_jumbotron}}" alt="" style="width:50%;height:50%;"> <br> <br>
-                          <label for="">Foto Jumbotron</label>
-                          <input type="file" class="form-control" id="" name="foto_jumbotron" accept="image/*">
-                        </div>
-                    </div>
-                    <!-- /.card-body -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <a href="/admin/program-lembaga/create" class="btn btn-primary" type="submit">Tambah Program Lembaga</a>
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="table-responsive">
+                <table id="example2" class="table table-bordered table-hover table-responsive">
+                  <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Nama</th>
+                    <th>Deskripsi</th>
+                    <th>Lembaga</th>
+                    <th style="width: 200px!important;">Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($data as $key => $w)
+                    <tr>
+                      <td>{{$key+=1}}</td>
+                      <td>{{$w->title}}</td>
+                      <td>{{$w->description}}</td>
+                      <td>{{$w->lembaga->nama}}</td>
+                      <td><a href="/admin/program-lembaga/edit/{{$w->id}}" class="btn btn-primary"><i class="fas fa-edit"></i></a> <a href="/admin/program-lembaga/delete/{{$w->id}}" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk menghapus data ini?');"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                  <tfoot>
 
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                    </form>
+                  </tfoot>
+                </table>
                 </div>
-                <!-- /.card -->
-
+              </div>
+              <!-- /.card-body -->
             </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
         </div>
+        <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
     </section>
@@ -129,7 +128,6 @@
 <script src="{{asset('plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -140,11 +138,11 @@
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
-      "searching": false,
+      "searching": true,
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
+      "responsive": false,
     });
   });
 </script>

@@ -122,48 +122,14 @@
         <div class="lembaga px-md-5 py-4">
             <div class="h5 mb-4 section-title">Lembaga Desa</div>
             <div class="wrapper">
+                @foreach($lembaga as $l)
                 <div class="item me-2">
-                    <a href="/lembaga/bumdes">
-                        <img src="{{ URL::asset('img/index/lembaga/bumdes.png'); }}" class="p-3"
+                    <a href="/lembaga/{{$l->id}}">
+                        <img src="{{ URL::asset('img/lembaga/jumbotron/'.$l->foto_jumbotron); }}" class="p-3"
                             alt="1">
                     </a>
                 </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="1">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="2">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="3">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="4">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="1">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="2">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="3">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="4">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="1">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="2">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="3">
-                </div>
-                <div class="item me-2">
-                    <img src="{{ URL::asset('img/index/lembaga/1.png'); }}" class="p-3" alt="4">
-                </div>
+                @endforeach
             </div>
         </div>
         <!-- END LEMBAGA -->

@@ -52,6 +52,12 @@
                     <div class="card-header">
                     <h3 class="card-title">Isikan Data Warga </h3>
                     </div>
+                    @if(Session::has('alert'))
+                    <div class="alert alert-danger alert-dismissible" style="margin-top: 10px; margin-bottom: -10px;">
+                        <a href=""><button type="button" class="close" data-dismiss="alert">&times;</button></a>
+                        {{Session::get('alert')}}
+                    </div>
+                    @endif
                     <!-- /.card-header -->
                     <!-- form start -->
                     <form action="/admin/warga/store" method="POST">
@@ -86,7 +92,7 @@
                         </div>
                         <div class="form-group">
                         <label for="">Tanggal Lahir</label>
-                        <input type="text" class="form-control" id="" placeholder="Tanggal Lahir" required name="tgl_lahir">
+                        <input type="date" class="form-control" id="" placeholder="Tanggal Lahir" required name="tgl_lahir">
                         </div>
                         <div class="form-group">
                         <label for="">Golongan Darah</label>
@@ -94,15 +100,25 @@
                         </div>
                         <div class="form-group">
                         <label for="">Agama</label>
-                        <input type="text" class="form-control" id="" placeholder="Agama" required name="agama">
+                        <select name="agama" id="" class="form-control" required>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Protestan</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Buddha">Buddha</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Konghuchu">Konghuchu</option>
+                        </select>
                         </div>
                         <div class="form-group">
-                        <label for="">satulimalima</label>
-                        <input type="text" class="form-control" id="" placeholder="15543" required name="satulimalima">
+                        <label for="">Tempat Tinggal</label>
+                        <input type="text" class="form-control" id="" placeholder="Tempat Tinggal" required name="satulimalima">
                         </div>
                         <div class="form-group">
                         <label for="">Status Kawin</label>
-                        <input type="text" class="form-control" id="" placeholder="Status Kawin" required name="st_kawin">
+                        <select name="st_kawin" id="" class="form-control" required>
+                            <option value="Lajang">Lajang</option>
+                            <option value="Menikah">Menikah</option>
+                        </select>
                         </div>
                         <div class="form-group">
                         <label for="">Shdrt</label>
