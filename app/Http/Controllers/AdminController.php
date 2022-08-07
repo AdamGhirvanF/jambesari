@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Models\Warga;
 use App\Models\Berita;
 use App\Models\Program;
+use App\Models\ProgramLembaga;
 use App\Models\Lembaga;
 use App\Models\Galeri;
 
@@ -51,6 +53,13 @@ class AdminController extends Controller
         return view('admin.lembaga.index', ['data' => $data]);
     }
 
+    public function indexProgramLembaga()
+    {
+        $data = ProgramLembaga::all();
+
+        return view('admin.program-lembaga.index', ['data' => $data]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -76,6 +85,12 @@ class AdminController extends Controller
         return view('admin.lembaga.create');
     }
 
+    public function createProgramLembaga()
+    {
+        $data = Lembaga::all();
+        return view('admin.program-lembaga.create', ['data' => $data]);
+    }
+
     public function createGaleri()
     {
         return view('admin.galeri.create');
@@ -91,6 +106,10 @@ class AdminController extends Controller
     {
         $data = new Warga;
         $data->nokk = $req->nokk;
+        if(Warga::where('nik', $req->nik)->first() != null) {
+            Session::flash('alert', 'Gagal menambahkan, NIK sudah terdaftar');
+            return redirect()->back();
+        }
         $data->nik = $req->nik;
         $data->nmkk = $req->nmkk;
         $data->nama = $req->nama;
@@ -159,7 +178,6 @@ class AdminController extends Controller
         $data = new Lembaga;
         $data->nama = $req->nama;
         $data->deskripsi = $req->deskripsi;
-        $data->program_kerja = $req->program_kerja;
         $image = $req->file('logo');
         $fileName = $image->getClientOriginalName();
         $image->move(public_path('img/lembaga/logo/'), $fileName);
@@ -171,6 +189,17 @@ class AdminController extends Controller
         $data->save();
 
         return redirect('admin/lembaga');
+    }
+
+    public function storeProgramLembaga(Request $req)
+    {
+        $data = new ProgramLembaga;
+        $data->title = $req->nama;
+        $data->description = $req->deskripsi;
+        $data->lembaga_id = $req->lembaga_id;
+        $data->save();
+
+        return redirect('admin/program-lembaga');
     }
 
     /**
@@ -223,6 +252,13 @@ class AdminController extends Controller
         $data = Lembaga::find($id);
         
         return view('admin.lembaga.edit', ['data' => $data]);
+    }
+
+    public function editProgramLembaga($id)
+    {
+        $data = ProgramLembaga::find($id);
+        $lembaga = Lembaga::all();
+        return view('admin.program-lembaga.edit', ['data' => $data, 'lembaga' => $lembaga]);
     }
 
     public function storeEditWarga(Request $req, $id)
@@ -305,7 +341,6 @@ class AdminController extends Controller
         $data = Lembaga::find($id);
         $data->nama = $req->nama;
         $data->deskripsi = $req->deskripsi;
-        $data->program_kerja = $req->program_kerja;
         
         if($req->file('logo') != null) {
             $image = $req->file('logo');
@@ -326,6 +361,16 @@ class AdminController extends Controller
         return redirect('admin/lembaga');
     }
 
+    public function storeEditProgramLembaga(Request $req, $id)
+    {
+        $data = ProgramLembaga::find($id);
+        $data->title = $req->nama;
+        $data->description = $req->deskripsi;
+        $data->lembaga_id = $req->lembaga_id;
+        $data->save();
+
+        return redirect('admin/program-lembaga');
+    }
 
     /**
      * Update the specified resource in storage.
@@ -383,5 +428,13 @@ class AdminController extends Controller
         $data->delete();
 
         return redirect('/admin/lembaga');
+    }
+
+    public function deleteProgramLembaga($id)
+    {
+        $data = ProgramLembaga::find($id);
+        $data->delete();
+
+        return redirect('/admin/program-lembaga');
     }
 }

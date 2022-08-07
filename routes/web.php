@@ -37,6 +37,13 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/lembaga/edit-store/{id}', [AdminController::class, 'storeEditLembaga']);
     Route::get('/lembaga/delete/{id}', [AdminController::class, 'deleteLembaga']);
 
+    Route::get('/program-lembaga', [AdminController::class, 'indexProgramLembaga']);
+    Route::get('/program-lembaga/create', [AdminController::class, 'createProgramLembaga']);
+    Route::post('/program-lembaga/store', [AdminController::class, 'storeProgramLembaga']);
+    Route::get('/program-lembaga/edit/{id}', [AdminController::class, 'editProgramLembaga']);
+    Route::post('/program-lembaga/edit-store/{id}', [AdminController::class, 'storeEditProgramLembaga']);
+    Route::get('/program-lembaga/delete/{id}', [AdminController::class, 'deleteProgramLembaga']);
+
     Route::get('/galeri', [AdminController::class, 'indexGaleri']);
     Route::get('/galeri/create', [AdminController::class, 'createGaleri']);
     Route::post('/galeri/store', [AdminController::class, 'storeGaleri']);
@@ -51,9 +58,10 @@ Route::get('', [FrontendController::class, 'indexHomepage']);
 Route::get('/berita', [FrontendController::class, 'indexBerita']);
 Route::get('/berita/one', [FrontendController::class, 'isiBerita']);
 Route::get('/program', [FrontendController::class, 'indexProgram']);
-Route::get('/lembaga/bumdes', [FrontendController::class, 'indexBumdes']);
+Route::get('/lembaga/{id}', [FrontendController::class, 'indexBumdes']);
 Route::get('/profil', [FrontendController::class, 'profilDesa']);
 Route::get('/struktur', [FrontendController::class, 'strukturDesa']);
 Route::get('/galeri', [FrontendController::class, 'galeriDesa']);
 Route::get('/layanan', [FrontendController::class, 'layananDesa']);
 Route::get('/kontak', [FrontendController::class, 'kontakDesa']);
+Route::post('/store-keluhan', [WargaController::class, 'storeKeluhan']);

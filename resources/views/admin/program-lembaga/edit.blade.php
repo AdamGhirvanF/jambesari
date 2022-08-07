@@ -28,12 +28,12 @@
         <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-            <h1>Ubah Data Lembaga</h1>
+            <h1>Ubah Data Program Lembaga</h1>
             </div>
             <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Lembaga</li>
+                <li class="breadcrumb-item active">Program Lembaga</li>
             </ol>
             </div>
         </div>
@@ -50,32 +50,32 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
-                    <h3 class="card-title">Ubah Data Lembaga </h3>
+                    <h3 class="card-title">Ubah Data Program Lembaga </h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="/admin/lembaga/edit-store/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                    <form action="/admin/program-lembaga/edit-store/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                     <div class="card-body">
-                        <div class="form-group">
+                      <div class="form-group">
                           <label for="">Nama</label>
-                          <input type="text" class="form-control" id="" placeholder="Nama" value="{{$data->nama}}" required name="nama">
+                          <input type="text" class="form-control" id="" placeholder="Nama" value="{{$data->title}}" required name="nama">
                         </div>
                         <div class="form-group">
                           <label for="">Deskripsi</label>
-                          <input type="text" class="form-control" id="" placeholder="Deskripsi" value="{{$data->deskripsi}}" required name="deskripsi">
+                          <input type="text" class="form-control" id="" placeholder="Deskripsi" value="{{$data->description}}" required name="deskripsi">
                         </div>
                         <div class="form-group">
-                          <label for="">Logo Lembaga Saat Ini</label><br>
-                          <img src="/img/lembaga/logo/{{$data->logo}}" alt="" style="width:50%;height:50%;"> <br> <br>
-                          <label for="">Update Logo Lembaga</label>
-                          <input type="file" class="form-control" id="" name="logo" accept="image/*">
-                        </div>
-                        <div class="form-group">
-                        <label for="">Foto Jumbotron Saat Ini</label><br>
-                          <img src="/img/lembaga/jumbotron/{{$data->foto_jumbotron}}" alt="" style="width:50%;height:50%;"> <br> <br>
-                          <label for="">Foto Jumbotron</label>
-                          <input type="file" class="form-control" id="" name="foto_jumbotron" accept="image/*">
+                          <label for="">Lembaga</label>
+                          <select class="form-control" required name="lembaga_id" id="">
+                            @foreach($lembaga as $d)
+                            @if($d->nama == $data->lembaga->nama)
+                            <option value="{{$d->id}}" selected>{{$d->nama}}</option>
+                            @else
+                            <option value="{{$d->id}}">{{$d->nama}}</option>
+                            @endif
+                            @endforeach
+                          </select>
                         </div>
                     </div>
                     <!-- /.card-body -->

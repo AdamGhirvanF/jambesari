@@ -47,7 +47,9 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"><a href="/admin/lembaga/create" class="btn btn-primary" type="submit">Tambah Lembaga</a></h3>
+                <h3 class="card-title">
+                  <a href="/admin/lembaga/create" class="btn btn-primary" type="submit">Tambah Lembaga</a>
+                </h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -58,7 +60,6 @@
                     <th>No.</th>
                     <th>Nama</th>
                     <th>Deskripsi</th>
-                    <th>Program Kerja</th>
                     <th>Logo</th>
                     <th>Foto Jumbotron</th>
                     <th style="width: 200px!important;">Action</th>
@@ -70,7 +71,6 @@
                       <td>{{$key+=1}}</td>
                       <td>{{$w->nama}}</td>
                       <td>{{$w->deskripsi}}</td>
-                      <td>{{$w->program_kerja}}</td>
                       <td><img src="/img/lembaga/logo/{{ $w->logo }}" alt="" style="width: 300px; height: 100x;"></td>
                       <td><img src="/img/lembaga/jumbotron/{{ $w->foto_jumbotron }}" alt="" style="width: 300px; height: 100x;"></td>
                       <td><a href="/admin/lembaga/edit/{{$w->id}}" class="btn btn-primary"><i class="fas fa-edit"></i></a> <a href="/admin/lembaga/delete/{{$w->id}}" class="btn btn-danger" onclick="return confirm('Apakah anda yakin untuk menghapus data ini?');"><i class="fa fa-trash"></i></a></td>

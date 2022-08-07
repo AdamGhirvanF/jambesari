@@ -66,10 +66,6 @@
                           <input type="text" class="form-control" id="" placeholder="Deskripsi" required name="deskripsi">
                         </div>
                         <div class="form-group">
-                          <label for="">Program Kerja</label>
-                          <input type="text" class="form-control" id="" placeholder="Program Kerja" required name="program_kerja">
-                        </div>
-                        <div class="form-group">
                           <label for="">Logo</label>
                           <input type="file" class="form-control" id="" required name="logo">
                         </div>

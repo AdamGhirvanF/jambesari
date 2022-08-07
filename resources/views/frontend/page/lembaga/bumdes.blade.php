@@ -10,7 +10,7 @@
                         <li class="breadcrumb-item"><a href="/">Beranda</a></li>
                         <li class="breadcrumb-item" aria-current="page"><a
                                 href="/">Lembaga Desa</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">BUMDes</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ $data->nama }}</li>
                     </ol>
                 </nav>
             </div>
@@ -20,37 +20,19 @@
 
         <div class="bumdes">
             <div class="background">
-                <img src="{{ URL::asset('img/lembaga/bumdes/background.png')}}"
+                <img src="{{ URL::asset('img/lembaga/jumbotron/'.$data->foto_jumbotron);}}"
                     alt="BUMDes" width="100%" class="my-3">
             </div>
             <div class="container">
-                <div class="h2 text-center my-3">Badan Usaha Milik Desa</div>
+                <div class="h2 text-center my-3">{{ $data-> nama}}</div>
                 <div class="container">
                     <div class="row d-flex mb-3">
                         <div class="col col-md-3">
-                            <img src="{{ URL::asset('img/index/lembaga/bumdes.png')}}"
+                            <img src="{{ URL::asset('img/lembaga/logo/'.$data->logo);}}"
                                 class="logo mb-3">
                         </div>
                         <div class="col content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.
-                            Sapiente, veritatis. Perspiciatis itaque dolore
-                            adipisci
-                            aliquam, voluptates nemo nisi ratione ea suscipit
-                            esse
-                            quam odit culpa dolor ut soluta placeat nihil! Lorem
-                            ipsum dolor sit amet consectetur adipisicing elit.
-                            Quibusdam in laboriosam ipsam numquam delectus nihil
-                            at
-                            nostrum rerum eum illum facilis, architecto ut
-                            laborum
-                            quasi. Esse rem quibusdam perferendis ab!
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Eveniet cupiditate provident velit voluptates
-                            maiores eligendi, doloribus quaerat ipsa molestias,
-                            debitis dolores fugit placeat sapiente dolorem unde
-                            eius
-                            voluptate repudiandae ipsum!
+                            {{$data->deskripsi}}
                         </div>
                     </div>
                 </div>
@@ -58,63 +40,16 @@
 
                 <!-- to-do accordion -->
                 <div class="accordion px-3 mb-4">
+                    @foreach($data2 as $pl)
                     <button class="item p-3 mt-3 d-flex
-                        justify-content-between">Pengenalan
-                        Internet
+                        justify-content-between">{{$pl->title}}
                         <div class="icon">
                             <img src="{{ URL::asset('icon/lembaga/Arrow.svg')}}">
                         </div>
                     </button>
-                    <div class="panel px-3 pb-3">Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Minus, sapiente. Explicabo
-                        corporis reprehenderit tenetur expedita labore nobis
-                        animi
-                        magni optio, commodi iure recusandae? Ipsam quibusdam
-                        nostrum sequi dolorem cupiditate explicabo?</div>
-                    <button class="item p-3 mt-3 d-flex
-                        justify-content-between">Pelatihan
-                        Pembuatan Bricket
-                        <div class="icon">
-                            <img src="{{ URL::asset('icon/lembaga/Arrow.svg')}}">
-                        </div>
-                    </button>
-                    <div class="panel px-3 pb-3">Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Minus, sapiente. Explicabo
-                        corporis reprehenderit tenetur expedita labore nobis
-                        animi
-                        magni optio, commodi iure recusandae? Ipsam quibusdam
-                        nostrum sequi dolorem cupiditate explicabo?
-                        <br>
-                        <div class="mt-4 d-flex justify-content-between">
-                            <img src="{{ URL::asset('img/lembaga/bumdes/1.png')}}"
-                                alt="1"
-                                width="30%"><img
-                                src="{{ URL::asset('img/lembaga/bumdes/2.png')}}" alt="2"
-                                width="30%"><img
-                                src="{{ URL::asset('img/lembaga/bumdes/3.png')}}" alt="3"
-                                width="30%"></div>
-                        <br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        At
-                        voluptatum necessitatibus pariatur repudiandae
-                        consequuntur
-                        placeat quis, aperiam ab porro labore perferendis,
-                        libero,
-                        quidem sed. Odio ut voluptate non maiores repellat.
+                    <div class="panel px-3 pb-3">{{$pl->description}}
                     </div>
-                    <button class="item p-3 mt-3 d-flex
-                        justify-content-between">Pengajian
-                        Wirausaha
-                        <div class="icon">
-                            <img src="{{ URL::asset('icon/lembaga/Arrow.svg')}}">
-                        </div>
-                    </button>
-                    <div class="panel px-3 pb-3">Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Minus, sapiente. Explicabo
-                        corporis reprehenderit tenetur expedita labore nobis
-                        animi
-                        magni optio, commodi iure recusandae? Ipsam quibusdam
-                        nostrum sequi dolorem cupiditate explicabo?</div>
+                    @endforeach
                 </div>
             </div>
         </div>

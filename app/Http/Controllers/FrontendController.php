@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Warga;
 use App\Models\Berita;
 use App\Models\Program;
+use App\Models\ProgramLembaga;
 use App\Models\Lembaga;
 use App\Models\Galeri;
 
@@ -14,7 +15,8 @@ class FrontendController extends Controller
     public function indexHomepage()
     {
         $carousel = Galeri::all()->take(6);
-        return view("frontend.index", ["title" => "Beranda", 'carousel' => $carousel]);
+        $lembaga = Lembaga::all()->take(8);
+        return view("frontend.index", ["title" => "Beranda", 'carousel' => $carousel, 'lembaga' => $lembaga]);
     }
 
     public function profilDesa() {
@@ -50,9 +52,11 @@ class FrontendController extends Controller
         return view("frontend.page.berita.one", ["title" => "Judul Berita"]);
     }
 
-    public function indexBumdes()
+    public function indexBumdes($id)
     {
-        return view("frontend.page.lembaga.bumdes", ["title" => "BUMDes"]);
+        $data = Lembaga::find($id);
+        $data2 = ProgramLembaga::where('lembaga_id',$id)->get();
+        return view("frontend.page.lembaga.bumdes", ["title" => $data->nama, "data" => $data, "data2" => $data2]);
     }
 
     public function indexProgram()

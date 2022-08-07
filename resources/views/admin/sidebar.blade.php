@@ -39,6 +39,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="/admin/program-lembaga" class="nav-link {{ ((request()->is('admin/program-lembaga/*') || request()->is('admin/program-lembaga')) ) ? 'active' : '' }}">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p> Data Program Lembaga</p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="/admin/lembaga" class="nav-link {{ ((request()->is('admin/lembaga/*') || request()->is('admin/lembaga')) ) ? 'active' : '' }}">
               <i class="nav-icon fa fa-building"></i>
               <p> Data Lembaga</p>
