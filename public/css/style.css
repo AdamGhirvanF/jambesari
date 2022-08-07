@@ -372,6 +372,10 @@ footer a {
     height: 10vh;
 }
 
+.foto {
+    background-color: var(--third-color);
+}
+
 /* Profil Style */
 
 .profil{
@@ -379,6 +383,11 @@ footer a {
  }
 
  .profil .title {
+    background-color: #F1ECE4;
+ }
+
+ .sejarah {
+    text-align: justify;
     background-color: #F1ECE4;
  }
 
@@ -457,12 +466,13 @@ footer a {
 
 .table {
     margin:0 auto;
-    border: #7B84BF;
+    border: #B9B9B9;
 }
 
 .thead {
-    background: var(--first-color);
-    color: white;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+linear-gradient(0deg, #B9B9B9, #B9B9B9);
+
 }
 
 .pengajuan {
@@ -922,6 +932,10 @@ max-width: 100%;
 
     .struktur .content {
         font-size: 16px;
+    }
+
+    .foto {
+        background-color: var(--third-color);
     }
 
     /* Profil Style */
