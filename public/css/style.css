@@ -386,6 +386,11 @@ footer a {
     background-color: #F1ECE4;
  }
 
+ .sejarah {
+    text-align: justify;
+    background-color: #F1ECE4;
+ }
+
  .map-container{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -461,12 +466,13 @@ footer a {
 
 .table {
     margin:0 auto;
-    border: #7B84BF;
+    border: #B9B9B9;
 }
 
 .thead {
-    background: var(--first-color);
-    color: white;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+linear-gradient(0deg, #B9B9B9, #B9B9B9);
+
 }
 
 .pengajuan {
