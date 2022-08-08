@@ -33,42 +33,6 @@
                 </div>
                 @endforeach
             </div>
-            <!-- <div id="galeri-jambesari" class="carousel slide mobile"
-                data-bs-ride="true">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#galeri-jambesari"
-                        data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#galeri-jambesari"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#galeri-jambesari"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="{{ URL::asset('img/galeri/1.png'); }}" class="d-block
-                            w-100 h-100" alt="...">
-                    </div>
-                    @foreach($carousel as $c)
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="{{ URL::asset('img/galeri/1.png'); }}" class="d-block
-                            w-100" alt="...">
-                    </div>
-                    @endforeach
-                </div>
-                <button class="carousel-control-prev" type="button"
-                    data-bs-target="#galeri-jambesari" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button"
-                    data-bs-target="#galeri-jambesari" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div> -->
         </div>
         <!-- END GALERI -->
 
@@ -123,9 +87,9 @@
             <div class="h5 mb-4 section-title">Lembaga Desa</div>
             <div class="wrapper">
                 @foreach($lembaga as $l)
-                <div class="item me-2">
+                <div class="item">
                     <a href="/lembaga/{{$l->id}}">
-                        <img src="{{ URL::asset('img/lembaga/jumbotron/'.$l->foto_jumbotron); }}" class="p-3"
+                        <img src="{{ URL::asset('img/lembaga/logo/'.$l->logo); }}" class="p-3"
                             alt="1">
                     </a>
                 </div>
