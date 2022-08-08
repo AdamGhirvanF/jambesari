@@ -152,7 +152,6 @@ a {
 }
 
 .lembaga .item {
-    margin: auto;
     text-align: center;
     transition: .3s ease-in;
     border-radius: 10px;
@@ -160,6 +159,9 @@ a {
 
 .lembaga .item img {
     transition: 0.3s ease-in-out;
+    max-height: 100px;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .lembaga .item:hover img {
@@ -218,6 +220,12 @@ footer a {
 }
 
 /* Bumdes Style */
+
+.bumdes .background img {
+    max-height: 50vh;
+    object-fit: cover;
+    object-position: center center;
+}
 
 .bumdes .logo {
     max-width: 100px;
