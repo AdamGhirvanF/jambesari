@@ -16,9 +16,9 @@
 
         <!-- DESCRIPTION -->
         <div class="desc">
-            <div class="container">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+            <div class="container" style="text-align: justify;">
+                Desa Jambesari adalah salah satu desa penduduk Ibu kota kecamatan 
+                Poncokusumo kabupaten Malang dalam lingkup provinsi Jawa Timur. 
             </div>
         </div>
         <!-- END DESCRIPTION -->
