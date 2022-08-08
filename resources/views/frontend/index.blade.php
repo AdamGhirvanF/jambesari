@@ -17,8 +17,12 @@
         <!-- DESCRIPTION -->
         <div class="desc">
             <div class="container">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+                Desa Jambesari adalah salah satu desa pendukung ibukota Kecamatan Poncokusumo, Kabupaten Malang dalam lingkup Provinsi Jawa Timur. Secara geografis, Desa Jambesari berada pada koordinat antara 112 44'-23" LS dan 80 04'004" BT. Desa Jambesari memiliki luas 600 Ha.
+                <br>Adapun batas-batas wilayah Desa Jambesari yaitu :
+                <br>- Utara : Desa Ngebruk, Kecamatan Poncokusumo
+                <br>- Timur : Desa Karanganyar, Kecamatan Poncokusumo
+                <br>- Selatan : Desa Ngembal, Kecamatan Wajak
+                <br>- Barat : Desa Ngembal, Kecamatan Wajak
             </div>
         </div>
         <!-- END DESCRIPTION -->
