@@ -83,7 +83,7 @@
         <!-- END STATISTIK -->
 
         <!-- LEMBAGA -->
-        <div class="lembaga px-md-5 py-4">
+        <div class="lembaga px-md-5 py-4" id="lembaga">
             <div class="h5 mb-4 section-title">Lembaga Desa</div>
             <div class="wrapper">
                 @foreach($lembaga as $l)

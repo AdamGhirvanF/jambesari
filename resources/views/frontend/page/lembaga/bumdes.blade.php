@@ -9,7 +9,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Beranda</a></li>
                         <li class="breadcrumb-item" aria-current="page"><a
-                                href="/">Lembaga Desa</a></li>
+                                href="/#lembaga">Lembaga Desa</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{ $data->nama }}</li>
                     </ol>
                 </nav>
