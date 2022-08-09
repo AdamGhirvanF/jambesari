@@ -56,7 +56,7 @@ Route::post('/cek-nik-store', [WargaController::class, 'checkNIK']);
 
 Route::get('', [FrontendController::class, 'indexHomepage']);
 Route::get('/berita', [FrontendController::class, 'indexBerita']);
-Route::get('/berita/one', [FrontendController::class, 'isiBerita']);
+Route::get('/berita/{id}', [FrontendController::class, 'isiBerita']);
 Route::get('/program', [FrontendController::class, 'indexProgram']);
 Route::get('/lembaga/{id}', [FrontendController::class, 'indexBumdes']);
 Route::get('/profil', [FrontendController::class, 'profilDesa']);

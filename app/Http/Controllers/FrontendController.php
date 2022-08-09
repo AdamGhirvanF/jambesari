@@ -47,9 +47,11 @@ class FrontendController extends Controller
     }
 
     // satu berita
-    public function isiBerita()
+    public function isiBerita($id)
     {
-        return view("frontend.page.berita.one", ["title" => "Judul Berita"]);
+        $data = Berita::find($id);
+        $data2 = Berita::inRandomOrder()->limit(3)->get();
+        return view("frontend.page.berita.one", ["title" => $data->judul, "data" => $data, "data2" => $data2]);
     }
 
     public function indexBumdes($id)

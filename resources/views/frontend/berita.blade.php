@@ -15,10 +15,10 @@
                             </div>
                             <div class="card-body">
                                 <div class="date mb-3">{{ \Carbon\Carbon::parse($d->created_at)->format('l, d F Y') }}</div>
-                                <a href="/berita/one" class="stretched-link title">{{$d->judul}}</a>
+                                <a href="/berita/{{$d->id}}" class="stretched-link title">{{$d->judul}}</a>
                                 <div class="content mb-3">{{ $d->isi }}</div>
                                 <div class="next">
-                                    <a href="/berita/one" class="stretched-link">Baca
+                                    <a href="/berita/{{$d->id}}" class="stretched-link">Baca
                                         Selengkapnya</a>
                                 </div>
                             </div>
